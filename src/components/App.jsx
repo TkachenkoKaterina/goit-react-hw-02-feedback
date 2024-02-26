@@ -5,6 +5,7 @@ import countTotalFeedback from 'components/helpers/countTotalFeedback';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from './Section/Section';
 import Notification from './Notification/Notification ';
+import PropTypes from 'prop-types';
 
 class App extends Component {
     state = {
@@ -52,5 +53,11 @@ class App extends Component {
         );
     }
 }
+
+App.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+};
 
 export { App };
